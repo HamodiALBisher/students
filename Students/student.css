@@ -1,0 +1,264 @@
+/* General Layout and Typography Adjustments */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    padding: 20px;
+  }
+  
+  h3 {
+    color: #2c3e50;
+  }
+  
+  /* Enhance input fields */
+  .students-input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    outline: none;
+    transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+  }
+  
+  /* Form Interactions */
+  .students-button:focus {
+    outline: none;
+  }
+  
+  .students-button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .students-container, .student-list-container {
+      width: 100%;
+      max-width: none;
+      margin: 20px 0;
+    }
+  
+    .students-input, .students-button {
+      width: calc(100% - 40px); /* Adjust width on smaller screens */
+    }
+  }
+  
+  /* Additional Styles for Enhanced Usability */
+  .error-message {
+    font-size: 0.9rem;
+  }
+  
+  .input-error:focus {
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+  }
+  
+  /* Adjust spacing and alignment */
+  .student-item {
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced out over the full width of the container */
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .student-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .student-actions button {
+    font-size: 1.2rem;
+  }
+  
+  .delete-button:hover, .edit-button:hover {
+    opacity: 0.8;
+  }
+  
+
+.students-container {
+    background-color: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 320px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .students-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .students-button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .students-button:hover {
+    background-color: #45a049;
+  }
+  
+
+  .student-list-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+  }
+
+
+  
+  .student-list-count {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .student-list-title {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  
+  .student-item:last-child {
+    border-bottom: none;
+  }
+  .student-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .student-index {
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  .student-actions {
+    display: flex;
+    gap: 8px; /* Reduce the gap between the edit and delete buttons */
+  }
+  
+  
+  .student-actions button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0 7px;
+  }
+  
+  .edit-button {
+    color: #E67E22; /* Orange color for edit */
+  }
+
+  .delete-button {
+    color: #E74C3C; /* Red color for delete */
+  }
+
+ .input-error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 5px 0; /* Adjust spacing as needed */
+  }
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center modal vertically and horizontally */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px; /* Adjust width as necessary */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .modal-title {
+    font-size: 20px; /* Larger font size for the title */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 15px; /* More space below the title */
+  }
+  
+  .input-error, .modal-content input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .input-error {
+    border-color: red; /* Highlight error inputs */
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 15px; /* Adjust spacing as needed */
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font size for button text */
+  }
+  
+  .modal-content button:hover {
+    background-color: #45a049;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px; /* Position close button inside the top-right corner of modal */
+    top: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
